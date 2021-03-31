@@ -5,7 +5,8 @@
 
 	<!-- bean definition -->
 
-	<bean id="emp" class="spring.gradle.app.Employee">
+	<bean id="emp" class="spring.gradle.app.Employee"
+		scope="prototype">
 		<property name="name">
 			<value>Sonu</value>
 		</property>

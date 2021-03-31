@@ -1,10 +1,16 @@
 package spring.gradle.app;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Employee {
 
 	private int id;
 	private String name;
 	private double salary;
+
+	@Autowired
 	private Department dept;
 
 	public Employee() {

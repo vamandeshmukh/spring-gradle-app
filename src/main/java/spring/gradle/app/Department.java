@@ -2,6 +2,9 @@ package spring.gradle.app;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Department {
 
 	private int id;
