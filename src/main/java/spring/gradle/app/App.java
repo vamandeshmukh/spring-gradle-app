@@ -1,6 +1,7 @@
 package spring.gradle.app;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
@@ -9,11 +10,14 @@ public class App {
 
 		System.out.println("Start");
 
+		// 1. Annotation based Configuration
+//		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(App.class);
+
+		// 2. XML based configuration
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig.xml");
 
-		Employee emp = context.getBean(Employee.class);
-
-		emp.printName();
+		Employee emp = context.getBean("emp4", Employee.class);
+		System.out.println(emp.toString());
 
 	}
 
